@@ -209,6 +209,9 @@ margin-left: 20px;
 		font-size:110%;
 		margin-top:0.05em;
 	}
+	#contact-header {
+		margin-bottom:0.5em;
+	}
 }
 .page:after {
     content: "";
