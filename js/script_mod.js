@@ -39,7 +39,7 @@ function goToPageThree() {
 }
 function placeFooter() {
     $('footer').css('position','relative');
-    $('footer').css('top','5em');
+    $('footer').css('top','6.5em');
 }
 $(document).ready(
     function() {
