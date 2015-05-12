@@ -178,11 +178,29 @@ margin-left: 20px;
 	.project {
 		font-size:0.65em;
 	}
-	#jtron-div {
-		font-size:0.5m;
+	#jtron-content {
+		font-size:0.65em;
+	}
+	#jtron-div div {
+		line-height:105%;
+	}
+	#jtron-content h1{
+		margin-top:0.4em;
+		font-size:150%;
+	}
+	#jtron-content h2{
+		margin-top:0.2em;
+		font-size:125%;
 	}
 	#page3 {
 		background-size:cover;
+	}
+	#jtron-div {
+		margin-left:0.5em;
+		margin-right:0.5em;
+		padding-top:0.25em;
+		padding-bottom:0.25em;
+
 	}
 }
 .page:after {
