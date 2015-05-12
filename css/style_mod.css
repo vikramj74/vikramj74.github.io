@@ -212,6 +212,9 @@ margin-left: 20px;
 	#contact-header {
 		margin-bottom:0.5em;
 	}
+	#mail-div {
+		margin-top:2em;
+	}
 }
 .page:after {
     content: "";
