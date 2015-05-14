@@ -3,7 +3,8 @@ Description : -
 
 A responsive porfolio website , about me and my work.
 
-*LINK TO WEBSITE :*   vikramjaswal.net
+**LINK TO WEBSITE :**
+vikramjaswal.net
 
 Frameworks and Libraries Used : 
 -----------------------------
