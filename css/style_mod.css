@@ -87,9 +87,6 @@ html {
 .proj-desc {
 	font-size:0.75em;
 }
-.proj-desc strong {
-	text-decoration:underline;
-}
 /* Flaticon Mod */
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
