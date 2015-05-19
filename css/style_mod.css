@@ -10,7 +10,7 @@
 #page1 {
 	/*background:url("./../images/subtle_patterns/footer_lodyas/footer_lodyas.png");*/
 	background:url("./../images/subtle_patterns/wood_1/wood_1.png");
-	background-size:contain;
+	background-size:cover;
 	color:white;
 }
 #page2 {
