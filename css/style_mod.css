@@ -10,7 +10,7 @@
 #page1 {
 	/*background:url("./../images/subtle_patterns/footer_lodyas/footer_lodyas.png");*/
 	background:url("./../images/subtle_patterns/wood_1/wood_1.png");
-	background-size:contain;
+	background-size:cover;
 	color:white;
 }
 #page2 {
@@ -86,9 +86,6 @@ html {
 }
 .proj-desc {
 	font-size:0.75em;
-}
-.proj-desc strong {
-	text-decoration:underline;
 }
 /* Flaticon Mod */
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
