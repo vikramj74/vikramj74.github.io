@@ -5,27 +5,18 @@
 	font-size:2em;
 	text-align:center;
 	padding-top:2.5em;
-
+	margin:auto;
+	min-height:1000px;
+ 	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover
 }
-#page1 {
-	/*background:url("./../images/subtle_patterns/footer_lodyas/footer_lodyas.png");*/
-	background:url("./../images/subtle_patterns/wood_1/wood_1.png");
-	background-size:cover;
-	color:white;
-}
-#page2 {
-	background:url("./../images/subtle_patterns/logo_x_pattern/logo_x_pattern.png");
-	/*background:url("./../images/subtle_patterns/concrete_seamless/concrete_seamless.png");*/
-
-	background-size:cover;
-}
-#page3 {
-	background:url("./../images/subtle_patterns/ricepaper_v3/ricepaper_v3_@2X.png");
-	background-size:cover;
-	/*background:url("./../images/subtle_patterns/school/school.png");*/
-}
-
 body {
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
 	margin:0 !important;
 	padding:0 !important;
 }
@@ -35,6 +26,46 @@ p {
 html {
 	padding:0em 0em;
 	margin:0em;
+}
+.proj-desc {
+	font-size:0.75em;
+}
+.project {
+	background-color:#66CCCC;
+	color:white;
+	padding-top:1em;
+	padding-bottom:1em;
+}
+.focus h1 {
+	font-size:120%;
+	padding-top:0.25%;
+}
+#page1 {
+	/*background:url("./../images/subtle_patterns/footer_lodyas/footer_lodyas.png");*/
+	background:url("./../images/subtle_patterns/wood_1/wood_1.png");
+ 	background-size:cover;
+	/*position:relative;
+	z-index:-1;*/
+	color:white;
+}
+#page2 {
+	background:url("./../images/subtle_patterns/ricepaper_v3/ricepaper_v3_@2X.png");
+	/*background:url("./../images/subtle_patterns/concrete_seamless/concrete_seamless.png");*/
+	/*position:relative;
+	z-index:1;*/
+}
+#page3 {
+	background:url("./../images/subtle_patterns/logo_x_pattern/logo_x_pattern.png");
+	position:relative;
+	/*background:url("./../images/subtle_patterns/school/school.png");*/
+}
+#footer {
+	text-align:center;
+	text-decoration:italics;
+	font-size:0.75em;
+
+	position:relative;
+	top:5em;
 }
 #jtron-div {
 	background-color:#FFE28A;
@@ -48,10 +79,12 @@ html {
 }
 #contact-btn {
 	background-color:#FB2E01;
+	display:inline-block;
 	cursor:pointer;
 }
 #projects-btn {
 	background-color:#6FCB9F;
+	display: inline-block;
 	cursor:pointer;
 }
 #contact-btn:hover {
@@ -66,36 +99,21 @@ html {
 	margin:auto;
 	background-color:white;
 }
-.project {
-	background-color:#66CCCC;
-	color:white;
-	padding-top:1em;
-	padding-bottom:1em;
-}
+
 #rpro {
-	background-color:#f47835;			#a200ff
+	background-color:#f47835;			/*#a200ff*/
 }
 #airdb {
-	background-color:#d41243;			#f47835
+	background-color:#d41243;			/*#f47835*/
+	margin-bottom:5em !important;
 }
 #jquerygame {
-	background-color:#a200ff;			#d41243
+	background-color:#a200ff;			/*#d41243*/
 }
 #proj-container {
 	margin-top:1em;
 }
-.proj-desc {
-	font-size:0.75em;
-}
-/* Flaticon Mod */
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-	font-family: Flaticon;
-        font-size: 4em;
-font-style: normal;
-margin-left: 20px;
-}
-#social-links-list li a:hover {
+#social-links-list li a:hover, #social-links-list li a:visited, #social-links-list li a:active, #social-links-list li a:link   {
 	text-decoration:none;
 }
 #mail-div {
@@ -104,74 +122,84 @@ margin-left: 20px;
 #contact-header {
 	margin-bottom:2.5em;
 }
-.focus h1 {
-	font-size:120%;
-	padding-top:0.25%;
-}
+
 #dptlo-link {
 	color:white;
 }
 #navi {
 	font-size:1.25em;
 }
-#footer {
-	position:relative;
-	top:5em;
+
+#up {
+	position:fixed;
+	bottom:1em;
+	right:1em;
+	opacity:0.6;
+	color:white;
+	background-color:#00FF01;
+	font-size:2em;
+	height:2em;
+	width:2em;
+	border-radius: 0.25em;
+	border:0.05em solid white;
+}
+
+#up > i {
+	position:fixed;
+	bottom:7.25em;
+	right:7.25em;
+	font-size:0.2em;
+}
+#up:hover {
+	opacity:1;
 }
 /* Large desktops and laptops */
 @media (min-width: 1200px) {
-
+	.page {
+		min-height: 1000px;
+	}
 }
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
-
+	.page {
+		min-height: 850px;
+	}
 }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-	.project {
-		font-size:0.65em;
-		height:17em;
-	}
-	.shorten {
-		font-size:0.5em;
-	}
-	/*h1 {
-		font-size:0.1em;
-	}*/
 	
+	.page {
+		min-height: 900px;
+	}
+	.social-link{
+		font-size:50%;
+	}
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 	.project {
-		font-size:0.65em;
-	}
-	#airdb {
-		display:none;
-	}
-	#page3 {
-		background-size:cover;
-	}
-	#page3 {
-		height:767px;
+		font-size:0.9em;
 	}
 	.social-link {
 		font-size:0.45em;
 	}
-	#footer {
-		display:none;
-	}
 	.nav-btn h1{
-		font-size:0.5em;
+		font-size:0.725em;
+	}
+	.page {
+		min-height:1024px;
+	}
+	#airdb {
+		margin-bottom: 5em;
 	}
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
 	.project {
-		font-size:65%;
 		padding-top:0.10em;
 		padding-bottom:0.10em;
 	}
@@ -192,9 +220,6 @@ margin-left: 20px;
 		margin-top:0.2em;
 		font-size:125%;
 	}
-	#page3 {
-		background-size:cover;
-	}
 	#jtron-div {
 		margin-left:0.5em;
 		margin-right:0.5em;
@@ -212,14 +237,15 @@ margin-left: 20px;
 	#mail-div {
 		margin-top:2em;
 	}
+	.page {
+		min-height:750px;
+	}
 }
-.page:after {
-    content: "";
-    display: block;
-    clear: both;
-}
-#footer {
-	text-align:center;
-	text-decoration:italics;
-	font-size:0.75em;
+/* Flaticon Mod */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 4em;
+font-style: normal;
+margin-left: 20px;
 }
