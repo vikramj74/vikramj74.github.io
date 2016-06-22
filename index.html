@@ -154,5 +154,16 @@
                  catch(e){}
             })();
          </script>
+         <script>
+            var _izooto = _izooto || [];
+            $(document).ready(function() {
+                $("#projects-btn").click(function() {
+                   _izooto.push(["add_tag", "action", "projects-view"]); 
+                });
+                $("#contact-btn").click(function() {
+                   _izooto.push(["add_tag", "action", "contact-view"]); 
+                });
+            }); 
+         </script>
     </body>
 </html>
