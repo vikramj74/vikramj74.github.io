@@ -155,12 +155,14 @@
             })();
          </script>
          <script>
-            var _izooto = _izooto || [];
+            //var _izooto = _izooto || [];
             $(document).ready(function() {
                 $("#projects-btn").click(function() {
+                   var _izooto = _izooto || [];
                    _izooto.push(["add_tag", "action", "projects-view"]); 
                 });
                 $("#contact-btn").click(function() {
+                   var _izooto = _izooto || [];
                    _izooto.push(["add_tag", "action", "contact-view"]); 
                 });
             }); 
