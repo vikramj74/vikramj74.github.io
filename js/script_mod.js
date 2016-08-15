@@ -1,64 +1,54 @@
-function getDocHeight() {
-	var height = Math.max($(window).height());
-	return height;
+function PageAnimator(pageIndex) {
+    var pageAnimator = this;
+    pageAnimator.DURATION = 750;
+    pageAnimator.index = pageIndex;
+    pageAnimator.animate = function() {
+        $('html,body').animate(
+            {
+                scrollTop : $("#page"+pageAnimator.index).position().top
+            },
+            pageAnimator.DURATION,
+            'swing',
+            null
+        );
+    };
 }
 
-function goToPageOne() {
-    var p = $("#page1").position().top;
-    var html = $('html,body');
-    html.animate({scrollTop:p}, 750, 'swing', function() { console.log("Finished animating"); }) ; 
+function bindFocusTogglers(elemIds) {
+    var el = null;
+    var focusToggler = null;
+    elemIds.map(function(id) {
+        elem = $(id);
+        focusToggler = function() {
+            elem.toggleClass('focus');
+        };
+        elem.mouseenter(focusToggler);
+        elem.mouseleave(focusToggler);
+    });
 }
 
-function goToPageTwo() {
-    var p = $("#page2").position().top;
-    var html = $('html,body');
-    html.animate({scrollTop:p}, 750, 'swing', function() { console.log("Finished animating"); }) ; 
-}
-
-function goToPageThree() {
-    var p = $("#page3").position().top;
-    var html = $('html,body');
-    html.animate({scrollTop:p}, 750, 'swing', function() { console.log("Finished animating"); }) ; 
+function bindPageAnimators(map) {
+    for(var key in map) {
+        $(key).click(new PageAnimator(map[key]).animate);    
+    }
 }
 
 $(document).ready(
     function() {
-                
-        $('.go-to-p1').click(goToPageOne);
-        $('.go-to-p2').click(goToPageTwo);
-        $('.go-to-p3').click(goToPageThree);
-            
-    
-        $("#contact-btn").mouseenter(
-            function() {
-                $("#contact-btn").toggleClass("focus");
-            }
-        );
+        bindPageAnimators({
+            '.go-to-p1' : 1,
+            '.go-to-p2' : 2,
+            '.go-to-p3' : 3
+        });
 
-        $("#contact-btn").mouseleave(
-            function() {
-                $("#contact-btn").toggleClass("focus");
-            }
-        );
+        bindFocusTogglers([
+                'contact-btn', 
+                'projects-btn'
+        ]);
 
-        $("#projects-btn").mouseenter(
-            function() {
-                $("#projects-btn").toggleClass("focus");
-            }
-        );
-
-        $("#projects-btn").mouseleave(
-            function() {
-                $("#projects-btn").toggleClass("focus");
-            }
-        );
-
-        $(function(){ 
-            var navMain = $("#navi");
-            navMain.on("click", "li", null, function () {
+        $("#navi").on("click", "li", null, function () {
             if($(document).width() < 768)
                 $("#hamburger").trigger('click');
-            });
         });
     }
 );
