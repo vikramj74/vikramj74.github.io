@@ -123,8 +123,9 @@ html {
 	margin-bottom:2.5em;
 }
 
-#dptlo-link {
-	color:white;
+.project-link {
+	color:blue;
+	text-decoration:underline;
 }
 #navi {
 	font-size:1.25em;
